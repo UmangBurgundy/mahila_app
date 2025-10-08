@@ -1,0 +1,44 @@
+{
+  "name": "emergency-response-system",
+  "version": "1.0.0",
+  "description": "Emergency response control room system connecting users with nearby NGOs and volunteers",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "nodemon server/index.js",
+    "client": "cd client && npm start",
+    "mobile": "cd mobile && npm start",
+    "dev:full": "concurrently \"npm run dev\" \"npm run client\"",
+    "dev:mobile": "concurrently \"npm run dev\" \"npm run mobile\"",
+    "install:all": "npm install && cd client && npm install && cd ../mobile && npm install",
+    "install:mobile": "npm install && cd mobile && npm install"
+  },
+  "keywords": [
+    "emergency",
+    "response",
+    "control-room",
+    "ngo",
+    "volunteer",
+    "safety"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-validator": "^7.0.1",
+    "geolib": "^3.3.4",
+    "helmet": "^7.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^7.6.3",
+    "morgan": "^1.10.0",
+    "twilio": "^4.19.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "mongodb-memory-server": "^10.2.3",
+    "nodemon": "^3.0.1"
+  }
+}
